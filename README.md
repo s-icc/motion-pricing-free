@@ -1,6 +1,16 @@
 # Motion Pricing Free
 
-Accessible, responsive React pricing components with typed props, monthly/yearly billing, light and dark themes, and no runtime dependencies beyond React.
+Accessible, responsive React pricing components with typed props, monthly/yearly billing, light and dark themes, and no third-party runtime dependencies beyond React.
+
+Install the public package:
+
+```sh
+npm install @motion-pricing/free
+```
+
+Or use `pnpm add @motion-pricing/free` / `yarn add @motion-pricing/free`.
+
+For repository development:
 
 ```sh
 npm install
@@ -16,6 +26,8 @@ import '@motion-pricing/free/styles.css';
 
 The public component lives in `packages/free`; shared framework-neutral types and pricing helpers live in `packages/core`.
 
-See `docs/INSTALLATION.md`, `docs/API.md`, and `docs/CUSTOMIZATION.md` for the complete public guidance.
+Before publishing, run `npm run release:check` and inspect both package manifests. The framework-neutral Core package is public because Free depends on it, but consumers only need to install `@motion-pricing/free`.
+
+See `docs/INSTALLATION.md`, `docs/API.md`, `docs/CUSTOMIZATION.md`, and `docs/PUBLISHING.md` for the complete public guidance.
 
 

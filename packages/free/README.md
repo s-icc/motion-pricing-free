@@ -1,6 +1,10 @@
 # Motion Pricing Free
 
-Accessible React pricing cards with typed props, monthly/yearly billing, light/dark themes, and zero runtime dependencies beyond React.
+Accessible React pricing cards with typed props, monthly/yearly billing, light/dark themes, and no third-party runtime dependencies beyond React.
+
+```sh
+npm install @motion-pricing/free
+```
 
 ```tsx
 import { PricingTable, defaultPlans } from '@motion-pricing/free';

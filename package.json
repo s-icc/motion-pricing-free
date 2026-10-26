@@ -8,7 +8,10 @@
     "build": "npm run build --workspaces --if-present",
     "typecheck": "npm run build -w @motion-pricing/core && npm run build -w @motion-pricing/free && npm run typecheck --workspaces --if-present",
     "test": "vitest run",
-    "validate": "npm run typecheck && npm test && npm run build"
+    "validate": "npm run typecheck && npm test && npm run build",
+    "release:check": "npm run validate && npm pack -w @motion-pricing/core --dry-run && npm pack -w @motion-pricing/free --dry-run",
+    "publish:core": "npm publish -w @motion-pricing/core --access public",
+    "publish:free": "npm publish -w @motion-pricing/free --access public"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",

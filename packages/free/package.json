@@ -1,8 +1,19 @@
 {
   "name": "@motion-pricing/free",
   "version": "1.0.0",
-  "description": "Accessible, responsive React pricing components.",
+  "description": "Accessible, responsive React pricing cards with monthly and yearly billing, mobile plan tabs, and light and dark themes.",
   "type": "module",
+  "license": "MIT",
+  "author": "Motion Pricing Kit contributors",
+  "homepage": "https://github.com/s-icc/motion-pricing-free#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-icc/motion-pricing-free.git",
+    "directory": "packages/free"
+  },
+  "bugs": { "url": "https://github.com/s-icc/motion-pricing-free/issues" },
+  "keywords": ["react", "pricing", "pricing-table", "typescript", "responsive", "accessible"],
+  "engines": { "node": ">=18" },
   "sideEffects": ["**/*.css"],
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -10,11 +21,16 @@
     ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
     "./styles.css": "./dist/styles.css"
   },
-  "files": ["dist", "src", "README.md", "LICENSE"],
+  "files": ["dist/*.js", "dist/*.d.ts", "dist/styles.css", "README.md", "LICENSE"],
   "scripts": {
     "build": "tsc -p tsconfig.json && cp src/styles.css dist/styles.css",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepack": "npm run build -w @motion-pricing/core && npm run build"
   },
   "peerDependencies": { "react": ">=18", "react-dom": ">=18" },
-  "dependencies": { "@motion-pricing/core": "1.0.0" }
+  "dependencies": { "@motion-pricing/core": "1.0.0" },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

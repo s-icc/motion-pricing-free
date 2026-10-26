@@ -1,15 +1,31 @@
 {
   "name": "@motion-pricing/core",
   "version": "1.0.0",
+  "description": "Framework-neutral pricing types, sample plans, and formatting helpers for Motion Pricing.",
   "type": "module",
+  "license": "MIT",
+  "author": "Motion Pricing Kit contributors",
+  "homepage": "https://github.com/s-icc/motion-pricing-free#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-icc/motion-pricing-free.git",
+    "directory": "packages/core"
+  },
+  "bugs": { "url": "https://github.com/s-icc/motion-pricing-free/issues" },
+  "keywords": ["pricing", "typescript", "currency", "formatting"],
+  "engines": { "node": ">=18" },
   "sideEffects": false,
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
-  "files": ["dist", "src"],
+  "files": ["dist/*.js", "dist/*.d.ts", "README.md", "LICENSE"],
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
 

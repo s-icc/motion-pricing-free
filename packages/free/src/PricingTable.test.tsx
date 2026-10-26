@@ -15,6 +15,16 @@ describe('PricingTable', () => {
     render(<PricingTable plans={defaultPlans} billingCycle="yearly" />);
     expect(screen.getByRole('link', { name: 'Choose Studio' })).toHaveAttribute('href', '#buy');
   });
+
+  it('switches the active mobile plan with accessible plan tabs', () => {
+    render(<PricingTable plans={defaultPlans} billingCycle="monthly" />);
+    const starter = screen.getByRole('tab', { name: 'Starter' });
+    const studio = screen.getByRole('tab', { name: 'Studio' });
+    expect(studio).toHaveAttribute('aria-selected', 'true');
+    fireEvent.click(starter);
+    expect(starter).toHaveAttribute('aria-selected', 'true');
+    expect(screen.getByRole('article', { name: 'Starter' })).toHaveClass('mp-card--active');
+  });
 });
 
 describe('BillingToggle', () => {

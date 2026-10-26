@@ -2,8 +2,22 @@
 
 Install React and the package in a React 18+ project:
 
+### npm
+
 ```sh
 npm install react react-dom @motion-pricing/free
+```
+
+### pnpm
+
+```sh
+pnpm add react react-dom @motion-pricing/free
+```
+
+### Yarn
+
+```sh
+yarn add react react-dom @motion-pricing/free
 ```
 
 ```tsx
