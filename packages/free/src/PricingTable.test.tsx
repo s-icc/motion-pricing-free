@@ -16,6 +16,12 @@ describe('PricingTable', () => {
     expect(screen.getByRole('link', { name: 'Choose Studio' })).toHaveAttribute('href', '#buy');
   });
 
+  it('applies styles to documented element slots', () => {
+    render(<PricingTable plans={defaultPlans} billingCycle="monthly" styles={{ grid: { maxWidth: 900 }, featuredCard: { backgroundColor: 'tomato' }, cta: { borderRadius: 0 } }} />);
+    expect(screen.getByRole('heading', { name: 'Studio' }).closest('article')).toHaveAttribute('style', expect.stringContaining('background-color: tomato'));
+    expect(screen.getByRole('link', { name: 'Choose Studio' })).toHaveStyle({ borderRadius: '0' });
+  });
+
   it('switches the active mobile plan with accessible plan tabs', () => {
     render(<PricingTable plans={defaultPlans} billingCycle="monthly" />);
     const starter = screen.getByRole('tab', { name: 'Starter' });

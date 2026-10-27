@@ -1,6 +1,6 @@
 {
   "name": "@motion-pricing/free",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Accessible, responsive React pricing cards with monthly and yearly billing, mobile plan tabs, and light and dark themes.",
   "type": "module",
   "license": "MIT",

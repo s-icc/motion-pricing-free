@@ -17,7 +17,12 @@ The table is controlled: the host owns the billing cycle and any checkout behavi
 | `priceSuffix` | `{ monthly: string; yearly: string }` | `'/month'`, `'/year'` | Replaces the cadence copy beside each price. |
 | `className` | `string` | `''` | Adds a class to the outer section. |
 | `style` | `CSSProperties` | — | Adds inline styles or scoped CSS custom-property overrides. |
+| `styles` | `PricingTableStyles` | — | Adds inline styles to named component parts. See [Style slots](#style-slots). |
 | `onPlanSelect` | `(plan) => void` | — | Runs when a CTA is selected. The component does not initiate checkout. |
+
+## Style slots
+
+`styles` accepts `CSSProperties` for `root`, `header`, `billingToggle`, `billingToggleButton`, `tabs`, `grid`, `card`, `featuredCard`, `cardHeader`, `badge`, `description`, `price`, `featureList`, `feature`, and `cta`. `featuredCard` is merged after `card` for featured plans; the top-level `style` prop is merged after `styles.root`.
 
 ## `BillingToggle`
 
@@ -29,6 +34,8 @@ The table is controlled: the host owns the billing cycle and any checkout behavi
 | `yearlyLabel` | `string` | `'Yearly'` | Yearly option copy. |
 | `savingsLabel` | `string` | `'Save yearly'` | Supplemental Yearly copy. |
 | `className` | `string` | `''` | Adds a class to the radiogroup. |
+| `style` | `CSSProperties` | — | Adds inline styles to the radiogroup. |
+| `buttonStyle` | `CSSProperties` | — | Adds inline styles to both option buttons. |
 
 Arrow keys change the selected cadence. The active option uses radio semantics and participates in the tab order.
 
