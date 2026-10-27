@@ -29,6 +29,8 @@ import '@motion-pricing/free/styles.css';
 
 The public component lives in `packages/free`; shared framework-neutral types and pricing helpers live in `packages/core`.
 
+For every `PricingTable` and `BillingToggle` option, see the [Free props reference](https://motionpricingkit.netlify.app/docs/#free-props) in the Motion Pricing showcase documentation.
+
 Before publishing, run `npm run release:check` and inspect both package manifests. The framework-neutral Core package is public because Free depends on it, but consumers only need to install `@motion-pricing/free`.
 
 See `docs/INSTALLATION.md`, `docs/API.md`, `docs/CUSTOMIZATION.md`, and `docs/PUBLISHING.md` for the complete public guidance.
